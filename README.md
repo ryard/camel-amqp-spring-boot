@@ -1,1 +1,1 @@
-# camel-spring-boot-amqp-consumer
+# spring-boot-amqp-consumer
