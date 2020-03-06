@@ -6,10 +6,10 @@ import org.springframework.jms.annotation.EnableJms;
 
 @SpringBootApplication
 @EnableJms
-public class CamelSpringBootAmqpConsumerApplication {
+public class SpringBootAmqpConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CamelSpringBootAmqpConsumerApplication.class, args);
+        SpringApplication.run(SpringBootAmqpConsumerApplication.class, args);
     }
 
 }
