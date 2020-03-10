@@ -25,17 +25,6 @@
         <to id="amq_route_to_topic" uri="amqp:queue:NotMyQueue0?"/>
     </route>
 
-    <route id="incoming_route2">
-        <from id="amq_received2" uri="amqp:queue:NotMyQueue0"/>
-        <setHeader name="IncomingChannel2" id="_setIncomingChannel2">
-            <simple>${body}</simple>
-        </setHeader>
-        <!--  Logs to console -->
-        <log id="amq_log_received2" message="LATEST Received queue message:  ${body}"/>
-    </route>
-
-
-
     </camelContext>
 
     <bean class="com.redhat.demo.MessageProcessor" id="messageProcessor"/>
