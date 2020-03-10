@@ -19,7 +19,6 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-artemis:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
@@ -41,8 +40,6 @@
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.4" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.johnzon:johnzon-core:1.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-kqueue:osx-x86_64:4.1.45.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: org.apache.activemq:artemis-selector:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: jakarta.jms:jakarta.jms-api:2.0.3" level="project" />
     <orderEntry type="library" name="Maven: jakarta.json:jakarta.json-api:1.1.6" level="project" />
@@ -65,7 +62,6 @@
     <orderEntry type="library" name="Maven: org.apache.camel:camel-main:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-base:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-support:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-util:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-headersmap:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.cedarsoftware:java-util:1.40.0" level="project" />
@@ -111,20 +107,25 @@
     <orderEntry type="library" name="Maven: org.jvnet.staxex:stax-ex:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.16" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.soap:javax.xml.soap-api:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.amqphub.spring:amqp-10-jms-spring-boot-starter:2.2.1.redhat-00001" level="project" />
-    <orderEntry type="library" name="Maven: org.amqphub.spring:amqp-10-jms-spring-boot-autoconfigure:2.2.1.redhat-00001" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.qpid:qpid-jms-client:0.45.0.redhat-00002" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jms_2.0_spec:1.0.0.alpha-2-redhat-2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.qpid:proton-j:0.33.2.redhat-00001" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-amqp:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-jms:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-support:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jms_2.0_spec:1.0-alpha-2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.qpid:qpid-jms-client:0.48.0" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.45.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.45.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-kqueue:osx-x86_64:4.1.45.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.qpid:proton-j:0.33.3" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.45.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.45.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.45.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.45.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-kqueue:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.45.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.amqphub.spring:amqp-10-jms-spring-boot-starter:2.2.1.redhat-00001" level="project" />
+    <orderEntry type="library" name="Maven: org.amqphub.spring:amqp-10-jms-spring-boot-autoconfigure:2.2.1.redhat-00001" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd   http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <camelContext xmlns="http://camel.apache.org/schema/spring">
+
+    <!--  main route to subscribe to AMQ broker with queue name, MyQueue0 -->
+    <route id="incoming_route">
+        <from id="amq_received" uri="amqp:queue:MyQueue0"/>
+        <setHeader name="IncomingChannel" id="_setIncomingChannel">
+            <simple>${body}</simple>
+        </setHeader>
+<!--        <process id="incoming_message_processor" ref="messageProcessor"/>-->
+        <multicast id="_multicast">
+            <to id="_to_amq" uri="direct:amq"/>
+        </multicast>
+        <!--  Logs to console -->
+        <log id="amq_log_received" message="Received queue message:  ${body}"/>
+    </route>
+
+    <!--  main route to subscribe to remote MQTT endpoints and pass the data to downstream endpoints -->
+    <route id="outgoing_route">
+        <from id="amq_received" uri="direct:amq"/>
+        <to id="amq_route_to_topic" uri="amqp:queue:NotMyQueue0?"/>
+    </route>
+
+    <route id="incoming_route2">
+        <from id="amq_received2" uri="amqp:queue:NotMyQueue0"/>
+        <setHeader name="IncomingChannel2" id="_setIncomingChannel2">
+            <simple>${body}</simple>
+        </setHeader>
+        <!--  Logs to console -->
+        <log id="amq_log_received2" message="LATEST Received queue message:  ${body}"/>
+    </route>
+
+
+
+    </camelContext>
+
+    <bean class="com.redhat.demo.MessageProcessor" id="messageProcessor"/>
+    <bean id="_jmsConnectionFactory" class="org.apache.qpid.jms.JmsConnectionFactory">
+        <property name="remoteURI" value="amqps://amqp-integration.apps.cluster-sgnjj-4fa3.sgnjj-4fa3.example.opentlc.com:443?transport.trustStoreLocation=client.ts&amp;transport.trustStorePassword=password&amp;transport.verifyHost=false" />
+    </bean>
+
+</beans>

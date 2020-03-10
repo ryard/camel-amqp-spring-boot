@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "amq.queue",
+      "type": "java.lang.String",
+      "description": "Description for amq.queue."
+    },
+    {
+      "name": "amq.url",
+      "type": "java.lang.String",
+      "description": "Description for amq.url."
+    }
+  ] }
