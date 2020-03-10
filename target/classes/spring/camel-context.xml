@@ -16,13 +16,14 @@
             <to id="_to_amq" uri="direct:amq"/>
         </multicast>
         <!--  Logs to console -->
-        <log id="amq_log_received" message="Received queue message:  ${body}"/>
+        <log id="amq_log_received" message="Received queue message from MyQueue0:  ${body}"/>
     </route>
 
-    <!--  main route to subscribe to remote MQTT endpoints and pass the data to downstream endpoints -->
+    <!--  route to send message received from previous route to another queue  -->
     <route id="outgoing_route">
         <from id="amq_received" uri="direct:amq"/>
         <to id="amq_route_to_topic" uri="amqp:queue:NotMyQueue0?"/>
+        <log id="amq_log_received2" message="Received queue message from NotMyQueue0:  ${body}"/>
     </route>
 
     </camelContext>

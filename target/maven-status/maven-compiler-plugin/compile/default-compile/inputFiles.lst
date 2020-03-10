@@ -1,2 +1,2 @@
-/Users/jiang/workspace/github/camel-amqp-spring-boot/src/main/java/com/redhat/demo/SpringBootAmqpConsumerApplication.java
+/Users/jiang/workspace/github/camel-amqp-spring-boot/src/main/java/com/redhat/demo/Application.java
 /Users/jiang/workspace/github/camel-amqp-spring-boot/src/main/java/com/redhat/demo/MessageProcessor.java
