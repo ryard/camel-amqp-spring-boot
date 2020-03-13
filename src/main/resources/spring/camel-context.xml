@@ -30,7 +30,7 @@
 
     <bean class="com.redhat.demo.MessageProcessor" id="messageProcessor"/>
     <bean id="_jmsConnectionFactory" class="org.apache.qpid.jms.JmsConnectionFactory">
-        <property name="remoteURI" value="amqps://amqp-integration.apps.cluster-sgnjj-4fa3.sgnjj-4fa3.example.opentlc.com:443?transport.trustStoreLocation=client.ts&amp;transport.trustStorePassword=password&amp;transport.verifyHost=false" />
+        <property name="remoteURI" value="amqps://amqp-integration.apps.cluster-sgnjj-4fa3.sgnjj-4fa3.example.opentlc.com:443?transport.trustStoreLocation=/keystore/client.ts&amp;transport.trustStorePassword=password&amp;transport.verifyHost=false" />
     </bean>
 
 </beans>
